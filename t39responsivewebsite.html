@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodyfood</title>
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="t39Phone.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            /* font-size: 25px; */
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .fullhead {
+            display: flex;
+            /* background-color: rgb(171, 155, 131); */
+            /* height: 150px; */
+            color: rgb(255, 255, 255);
+            top: 0px;
+            font-size: 25px;
+            /* position: relative; */
+            position: sticky;
+        }
+
+        .fullhead::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #logoid {
+            height: 141px;
+            margin: 5px 26px;
+            padding: 2px;
+            width: 117px;
+            /* border: 3px solid black;*/
+        }
+
+        #logoid img {
+            height: 101px;
+            width: 103px;
+            padding: 3px;
+            border-radius: 65px;
+            border: 5px solid #090809;
+        }
+
+        #midnav {
+            margin: 51px 58px;
+
+        }
+
+        .clsul {
+            display: flex;
+            list-style: none;
+        }
+
+        .liul {
+            margin: 3px 22px
+        }
+
+        #searchbarid {
+            position: absolute;
+            right: 3px;
+            top: 3px;
+        }
+
+        .insearch {
+            border-radius: 45px;
+            padding: 10px 19px;
+            margin: 42px 40px;
+        }
+
+        #searchbarid img {
+            position: absolute;
+            top: 45px;
+            height: 35px;
+            right: 51px;
+
+        }
+
+
+        /* Home section */
+        #home {
+            /* border: 3px solid black; */
+            display: flex;
+            flex-direction: column;
+            padding: 85px 300px;
+            justify-content: center;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            align-items: center;
+            /* position: relative; */
+
+        }
+
+
+        #home::before {
+            content: "";
+            /* background: url(https://images.unsplash.com/photo-1562059390-a761a084768e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80) no-repeat center center/cover; */
+            background: url("bg1.jpg") no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            height: 542px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.75;
+
+        }
+
+        #home h1 {
+            font-size: 3rem;
+        }
+
+        #home>p {
+            font-size: 1.5rem;
+            margin: 5px;
+        }
+
+        .btncl {
+            width: 9vw;
+            padding: 4px;
+            margin: 21px;
+            font-size: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .btncl:hover {
+            background-color: rgb(215, 193, 193);
+        }
+
+        /* main body starts here */
+        .container {
+            /* display: flex; */
+            /* justify-content: center; */
+            text-align: center;
+        }
+
+        .clch1 {
+            margin: 5px 3px;
+        }
+
+        .items img {
+            border-radius: 21px;
+            margin: 13px 17px;
+            height: 137px;
+            width: 209px;
+        }
+
+        /* 
+        #bodyheading {
+            font-size: 3rem;
+        } */
+
+        .items {
+            display: inline-block;
+            border: 4px solid red;
+            padding: 15px;
+            margin: 16px;
+            text-align: center;
+            width: 514px;
+            border-radius: 49px;
+        }
+
+
+        /* client section starts here */
+        .client-section {
+            text-align: center;
+            font-size: 3rem;
+
+        }
+
+        .client_items img {
+            height: 150px;
+            width: 150px;
+            /* display: inline-block; */
+        }
+
+        .client_items {
+            height: 200px;
+            width: 200px;
+            z-index: -1;
+            position: relative;
+            display: inline-block;
+            margin: 10px 20px;
+        }
+
+        .allclitems {
+            position: relative;
+        }
+
+        .allclitems::before {
+            content: "";
+            background: url(https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1106&q=80) no-repeat center center/cover;
+            /* top: 0px; */
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .contact-box {
+            position: relative;
+
+        }
+
+        .csh1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+
+        /* contact box starts here  */
+        .contact-box::before {
+            content: "";
+            background: url(https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80) no-repeat center center/cover;
+            /* top: 0px; */
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .contact-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 34px;
+        }
+
+        .contact-div input,
+        .contact-div textarea {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+
+        .contact-div form {
+            width: 40%;
+
+        }
+
+        .contact-div label {
+            font-size: 1.6rem;
+
+        }
+
+        .foter {
+            background-color: #090809;
+            height: 100px;
+            color: aliceblue;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fotertext {
+            margin: 10px 6px;
+        }
+
+
+        /* responsive css start from here */
+
+        @media (max-width:300px) {
+            .fullhead {
+                display: flex;
+                /* background-color: rgb(171, 155, 131); */
+                /* height: 150px; */
+                color: rgb(255, 255, 255);
+                flex-direction: column;
+                top: 0px;
+                align-items: center;
+                font-size: 25px;
+                /* position: relative; */
+                position: sticky;
+            }
+
+            .fullhead::before {
+                content: "";
+                background-color: black;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.4;
+            }
+
+            #home::before {
+                content: "";
+                /* background: url(https://images.unsplash.com/photo-1562059390-a761a084768e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80) no-repeat center center/cover; */
+                background: url(bg1.jpg) no-repeat center center/cover;
+                position: absolute;
+                top: 0px;
+                height: 293px;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.75;
+            }
+
+            #logoid img {
+                height: 53px;
+                width: 53px;
+                /* text-align: center; */
+                padding: 2px;
+                border-radius: 62px;
+                border: 3px solid #090809;
+            }
+
+            #logoid {
+                height: 85px;
+                margin: 5px 26px;
+                width: 117px;
+                text-align: center;
+                /* border: 3px solid black; */
+            }
+
+            #midnav {
+                margin: 8px 58px;
+            }
+
+            .insearch {
+                border-radius: 45px;
+                padding: 10px 19px;
+                display: none;
+                margin: 42px 40px;
+            }
+
+            #searchbarid img {
+                position: absolute;
+                top: 45px;
+                display: none;
+                height: 35px;
+                right: 51px;
+            }
+
+            #home {
+                padding: 6px 3px;
+                margin-top: 33px;
+            }
+
+            #home h1 {
+                font-size: 1rem;
+            }
+
+            #home>p {
+                font-size: 0.4rem;
+            }
+
+            .btncl {
+                width: 20vw;
+                padding: 4px;
+                margin: 21px;
+                font-size: 0.4rem;
+                border-radius: 6px;
+            }
+
+            .items {
+                display: inline-block;
+                border: 4px solid red;
+                height: 173px;
+                text-align: center;
+                margin: 6px;
+                width: 206px;
+                border-radius: 16px;
+            }
+
+            #midnav {
+                margin: 2px;
+            }
+
+            .liul {
+                margin: 3px 5px;
+                font-size: 15px;
+            }
+
+            .foter {
+                background-color: #090809;
+                height: 100px;
+                color: aliceblue;
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #logonameid {
+                font-size: 18px;
+            }
+
+            .items img {
+                border-radius: 6px;
+                margin: 0px 2px;
+                height: 60px;
+                width: 101px;
+            }
+
+            .clh1 {
+                font-size: 1rem;
+            }
+
+            .infoabitem {
+                font-size: 0.4rem;
+            }
+
+            .csh1 {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .client_items img {
+                height: 40px;
+                width: 46px;
+                /* display: inline-block; */
+            }
+
+            .client_items {
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+                /* margin: 10px 20px; */
+            }
+
+            .contact-div label {
+                font-size: 0.6rem;
+            }
+
+
+
+            /* --- */
+            .contact-div form {
+                width: 90%;
+            }
+
+            .contact-div input,
+            .contact-div textarea {
+                width: 100%;
+                /* padding: 0.5rem; */
+            }
+
+            .contact-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 16px;
+            }
+
+            .contactinput {
+                height: 20px;
+            }
+        #messagetext{
+            height: 50px;
+        }
+
+
+        }
+
+
+        @media only screen and (min-width:301px) and (max-width:700px) {
+            .fullhead {
+                display: flex;
+                /* background-color: rgb(171, 155, 131); */
+                /* height: 150px; */
+                color: rgb(255, 255, 255);
+                flex-direction: column;
+                top: 0px;
+                align-items: center;
+                font-size: 25px;
+                /* position: relative; */
+                position: sticky;
+            }
+
+            .fullhead::before {
+                content: "";
+                background-color: black;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.4;
+            }
+
+            #home::before {
+                content: "";
+                /* background: url(https://images.unsplash.com/photo-1562059390-a761a084768e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80) no-repeat center center/cover; */
+                background: url(bg1.jpg) no-repeat center center/cover;
+                position: absolute;
+                top: 0px;
+                height: 293px;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.75;
+            }
+
+            #logoid img {
+                height: 53px;
+                width: 53px;
+                /* text-align: center; */
+                padding: 2px;
+                border-radius: 62px;
+                border: 3px solid #090809;
+            }
+
+            #logoid {
+                height: 85px;
+                margin: 5px 26px;
+                width: 117px;
+                text-align: center;
+                /* border: 3px solid black; */
+            }
+
+            #midnav {
+                margin: 8px 58px;
+            }
+
+            .insearch {
+                border-radius: 45px;
+                padding: 10px 19px;
+                display: none;
+                margin: 42px 40px;
+            }
+
+            #searchbarid img {
+                position: absolute;
+                top: 45px;
+                display: none;
+                height: 35px;
+                right: 51px;
+            }
+
+            #home {
+                padding: 6px 3px;
+                height: 161px;
+                margin-top: 33px;
+            }
+
+            #home h1 {
+                font-size: 1rem;
+            }
+
+            #home>p {
+                font-size: 0.4rem;
+            }
+
+            .btncl {
+                width: 15vw;
+                padding: 4px;
+                margin: 21px;
+                font-size: 0.4rem;
+                border-radius: 6px;
+            }
+
+            .items {
+                display: inline-block;
+                border: 4px solid red;
+                height: 173px;
+                text-align: center;
+                margin: 6px;
+                width: 206px;
+                border-radius: 16px;
+            }
+
+            #midnav {
+                margin: 2px;
+            }
+
+            .liul {
+                margin: 3px 5px;
+                font-size: 15px;
+            }
+
+            .foter {
+                background-color: #090809;
+                height: 100px;
+                color: aliceblue;
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #logonameid {
+                font-size: 18px;
+            }
+
+            .items img {
+                border-radius: 6px;
+                margin: 0px 2px;
+                height: 60px;
+                width: 101px;
+            }
+
+            .clh1 {
+                font-size: 1rem;
+            }
+
+            .infoabitem {
+                font-size: 0.4rem;
+            }
+
+            .csh1 {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .client_items img {
+                height: 40px;
+                width: 46px;
+                /* display: inline-block; */
+            }
+
+            .client_items {
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+
+            .contact-div label {
+                font-size: 0.6rem;
+            }
+
+            .contact-div input,
+            .contact-div textarea {
+                width: 100%;
+                /* padding: 0.5rem; */
+            }
+
+            .contact-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 16px
+            }
+            .contactinput {
+                height: 20px;
+            }
+        #messagetext{
+            height: 50px;
+        }
+        }
+
+
+        @media only screen and (min-width:701px) and (max-width:1000px) {
+            #midnav {
+                margin: 55px -14px;
+            }
+
+            .insearch {
+                border-radius: 45px;
+                padding: 9px 5px;
+                margin: 49px 4px;
+            }
+
+            #searchbarid img {
+                position: absolute;
+                top: 52px;
+                height: 32px;
+                right: 11px;
+            }
+
+            .liul {
+                margin: 0px 8px;
+            }
+
+            #home {
+                /* border: 3px solid black; */
+                display: flex;
+                flex-direction: column;
+                padding: 68px 15px;
+                justify-content: center;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                align-items: center;
+                /* position: relative; */
+            }
+
+            .btncl {
+                width: 19vw;
+                padding: 4px;
+                margin: 21px;
+                font-size: 1.5rem;
+                border-radius: 12px;
+            }
+        }
+
+        @media (min-width:1001px) and (max-width:1350px) {
+            .btncl {
+                width: 17vw;
+                padding: 4px;
+                margin: 21px;
+                font-size: 1.5rem;
+                border-radius: 12px;
+            }
+
+            #home {
+                /* border: 3px solid black; */
+                display: flex;
+                flex-direction: column;
+                padding: 75px 60px;
+                height: 418px;
+                justify-content: center;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                align-items: center;
+                /* position: relative; */
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="fullhead" id="fullheadid">
+        <div class="navhead" id="logoid">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFj6uZvhNFxhAi3lz852f4ADMIdGfRvgU_ZJ3bNv1P&s"
+                alt="1">
+            <span class="logoname" id="logonameid">Foodyfood</span>
+        </div>
+        <div class="navhead" id="midnav">
+            <ul class="clsul" id="midulid">
+                <li class="liul" id="liul-1">Home</li>
+                <li class="liul" id="liul-2">About</li>
+                <li class="liul" id="liul-3">Contact</li>
+                <li class="liul" id="liul-4">Sign up</li>
+            </ul>
+        </div>
+        <div class="navhead" id="searchbarid">
+            <img src="..\img\search_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <input placeholder="Search here" type="text" class="insearch" id="insearchid" placeholder="Search here...">
+        </div>
+    </header>
+    <section class="homecl" id="home">
+        <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam obcaecati voluptas eius minima nisi.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis fuga explicabo illum quisquam
+            temporibus .</p>
+        <button class="btncl">Order now</button>
+    </section>
+    <div class="container" id="containerid">
+        <h1 class="csh1" id="bodyheading">Our Services</h1>
+        <div class="items" id="item-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRADr_-kLMhHIp45Fo0iHQpYisb3gznrhSUP6s6NLkd&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Hamburger</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpZDxIFRf53PDn6WgyxV3pVIlwyT1dI__bvp7T5J-Y&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Cheeseburger</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPLKbSspO0LRWhoIKz6jdCBkjC11q_kr9rvHCHtRJ&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Chicken Nuggets</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK2uWmaJ3Vam7KJbrIQ4xAbO18X-fGVpLkC8S3OXY&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">French Fries</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlpbs3ocUKWNgPkuP7D_MtzzBKjuix0d9P6U8TRgKg&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Pizza Slice</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NxEJY47Sjstj2JDboBelqtPn7rI2HFcTbUmGqL7t&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Burrito</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-7">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoOHnsXSD01im7IPgk5OMInuZ4X9Q6Yo_YTL1WgKFR&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Hot Dog</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9rRIQ8F0Ec4mpuKcIwfoednyJPJazT63ny4tRRi4f&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Fried Chicken</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-9">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoT0elPj51-GcvJewb8_8pEhqEjJwdotl7qhr8_ZZF&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Tacos</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+        <div class="items" id="item-10">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXovSW6PqCskBVgjakQmqWMsoFGAY7nZr_fURA4J3ZRA&s"
+                alt="1">
+            <h1 class="clh1" id="idh1">Ice Cream Sundae</h1>
+            <p class="infoabitem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque
+                voluptatibus hic accusantium eum vitae eos molestiae omnis? Laboriosam eaque voluptatum nemo iure, hic
+                laudantium et ratione provident expedita quaerat doloremque aliquid minima, animi, aperiam maxime quo
+                corporis earum eligendi quod commodi nihil odit iste nulla repellendus! Impedit harum tempora eveniet
+                unde culpa nobis ipsa odio nisi. Fuga, nihil repellendus.</p>
+        </div>
+    </div>
+
+    <section class="client-section" id="client-sectionid">
+        <div class="allclitems">
+            <h1 class="csh1" id="csh1id">Our clients</h1>
+            <div class="client_items" id="client_item-1"><img
+                    src="https://cdn.mos.cms.futurecdn.net/6bTF6C2QiWXvhi33fJi3AC.jpg" alt="1"></div>
+            <div class="client_items" id="client_item-2"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png"
+                    alt=""></div>
+            <div class="client_items" id="client_item-3"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiRJemAlyFdsAGWYxC1u4DeFVRe8faJBipN8iQV9wj&s"
+                    alt=""></div>
+            <div class="client_items" id="client_item-4"><img
+                    src="https://img.freepik.com/free-icon/microsoft_318-566086.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-box" id="contact-box-1">
+        <h1 class="csh1" id="csh1id-2">Contact Us</h1>
+        <div class="contact-div" id="contact-divid-1">
+            <form action="" class="contactdetails" id="contactdetailsid-1">
+                <div class="contact-items" id="contact-item-1">
+                    <label for="ontactinput-1">Name:</label>
+                    <input type="text" class="contactinput" id="contactinput-1">
+                </div>
+                <div class="contact-items" id="contact-item-2">
+                    <label for="contactinput-2">Email:</label>
+                    <input type="email" class="contactinput" id="contactinput-2">
+                </div>
+                <div class="contact-items" id="contact-item-3">
+                    <label for="contactinput-3">Phone No:</label>
+                    <input type="number" class="contactinput" id="contactinput-3">
+                </div>
+                <div class="contact-items" id="contact-item-4">
+                    <label for="messagetext">Enter your message here:</label>
+                    <textarea name="message" id="messagetext" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="foter" id="foterid">
+        <span class="fotertext">copyright&copy;</span>
+        <span class="fotertext">www.foodyfood.com</span>
+    </footer>
+</body>
+
+</html>
